@@ -2,14 +2,14 @@
 
 import * as z from "zod";
 import axios from "axios";
-import {  MessageSquare } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-
+import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import { ChatCompletionRequestMessage } from "openai";
 
-
+import { BotAvatar } from "@/components/bot-avatar";
 import { Heading } from "@/components/heading";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,14 +17,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
 import { Loader } from "@/components/loader";
-
-
-import { useProModal } from "@/hooks/use-pro-modal";
-import { toast } from "react-hot-toast"
-import { formSchema } from "./constants";
-import { Empty } from "@/components/empty";
-import { BotAvatar } from "@/components/bot-avatar";
 import { UserAvatar } from "@/components/user-avatar";
+import { Empty } from "@/components/empty";
+import { useProModal } from "@/hooks/use-pro-modal";
+
+import { formSchema } from "./constants";
 
 const ConversationPage = () => {
   const router = useRouter();
@@ -53,7 +50,7 @@ const ConversationPage = () => {
       if (error?.response?.status === 403) {
         proModal.onOpen();
       } else {
-        toast.error("Something went wrong")
+        toast.error("Something went wrong.");
       }
     } finally {
       router.refresh();
@@ -140,3 +137,4 @@ const ConversationPage = () => {
 }
  
 export default ConversationPage;
+

@@ -20,11 +20,9 @@ import { tools } from "@/constants";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
-
 export const ProModal = () => {
   const proModal = useProModal();
   const [loading, setLoading] = useState(false);
- 
 
   const onSubscribe = async () => {
     try {
@@ -38,7 +36,7 @@ export const ProModal = () => {
       setLoading(false);
     }
   }
-  const isPro = useProModal();
+
   return (
     <Dialog open={proModal.isOpen} onOpenChange={proModal.onClose}>
       <DialogContent>

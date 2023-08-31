@@ -6,26 +6,26 @@ const testimonials = [
     {
         name: "Leonard",
         avatar: "A",
-        title: "Engineer",
+        title: "Physicist",
+        description: "Finally, a place that pulls all of my favorite ai models into one simple dashboard!"
+    },
+    {
+        name: "Sheldon",
+        avatar: "A",
+        title: "Theoretical Physicist",
         description: "This is the bees knees!"
     },
     {
-        name: "Leonard",
+        name: "Walowitz",
         avatar: "A",
         title: "Engineer",
-        description: "This is the bees knees!"
+        description: "Engineers don't get PHd's, OKAY?"
     },
     {
-        name: "Leonard",
+        name: "Kuthrapali",
         avatar: "A",
-        title: "Engineer",
-        description: "This is the bees knees!"
-    },
-    {
-        name: "Leonard",
-        avatar: "A",
-        title: "Engineer",
-        description: "This is the bees knees!"
+        title: "Physicist",
+        description: "Tearing the face off the universe to say, hey girl, what's up?"
     },
 ]
 
