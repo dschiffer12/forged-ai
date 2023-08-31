@@ -8,8 +8,8 @@ import { CrispProvider } from '@/components/crisp=provider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'GeoAI',
-  description: 'A Neato Burrito creation',
+  title: 'FocusForge',
+  description: 'Your AI Dashboard',
 }
 
 export default function RootLayout({
