@@ -1,7 +1,8 @@
 import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 import { Configuration, OpenAIApi } from "openai";
-//import { checkSubscription } from "@/lib/subscription";
+
+import { checkSubscription } from "@/lib/subscription";
 import { incrementApiLimit, checkApiLimit } from "@/lib/api-limit";
 
 const configuration = new Configuration({
@@ -42,9 +43,9 @@ export async function POST(
       messages
     });
 
-   // if (!isPro) {
-   await incrementApiLimit();
-   // }
+    if (!isPro) {
+      await incrementApiLimit();
+    }
 
     return NextResponse.json(response.data.choices[0].message);
   } catch (error) {
