@@ -1,6 +1,6 @@
 import { Code, DoorOpenIcon, ImageIcon, MessageSquare, Music, VideoIcon } from "lucide-react";
 
-export const MAX_FREE_COUNTS = 5;
+export const MAX_FREE_COUNTS = 25;
 
 export const tools = [
   {
@@ -41,8 +41,8 @@ export const tools = [
   {
     label: 'Article Summarizer',
     icon: DoorOpenIcon,
-    color: "text-yellow-700",
-    bgColor: "bg-yellow-700/10",
-    href: '/dasboard',
+    color: "text-gold-700",
+    bgColor: "bg-gold-700/10",
+    href: '/dashboard',
   },
 ];
